@@ -1,0 +1,71 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+}
+
+#title {
+    font-weight: 900;
+    overflow: hidden;
+    width: 80vw;
+    height: 15vw;
+    font-weight: 900;
+    font-size: 25vw;
+    overflow: hidden;
+    cursor: default;
+}
+
+#title_text {
+    transition: color 0.5s cubic-bezier(1, 1, 1, 1);
+    transition-delay: 0s;
+    margin-top: -13%;
+    margin-left: -4%;
+    color: #606060;
+    cursor: pointer;
+}
+
+.text {
+    font-weight: 300;
+    width: 94vw;
+}
+
+@media screen and (min-width:600px) {
+    .text {
+        width: 34vw;
+    }
+    #title_text {
+        transition: none;
+        transition-delay: 0s;
+    }
+}
+
+#desc,
+#social,
+#contact,
+#projects,#cv{
+    margin-top: 10vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+#cv{
+    margin-top:2vh;
+}
+
+#social {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vh;
+}
+
+#projects {
+    margin-top: 12vh;
+}
+
+a{
+    text-decoration: underline;
+    color: black;
+}
+
+a:hover {
+    background: #606060;
+    color: white;
+}
