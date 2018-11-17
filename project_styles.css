@@ -9,12 +9,12 @@
 
 }
 #title_text{
-    transition: color 0.5s cubic-bezier(1, 1, 1, 1);
-    transition-delay: 0s;
-    margin-top: -13%;
-    margin-left: -4%;
-    color: #606060;
-    cursor: pointer;
+	text-decoration: none;
+	margin-top:-4%;
+	margin-left:0%;
+	width:40vw;
+	margin-right: 0px;
+	padding: 0;
 }
 
 
