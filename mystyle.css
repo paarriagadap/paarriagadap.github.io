@@ -10,22 +10,26 @@ body {
     width: 100vw;
     height: 10vw;
     font-size: 15vw;
-	color: white;
     background-color: #00ffff;
+    color: white;
     transition: background-color 0s;
+    transition: color 0s;
 }
 
 .header:hover {
-    background-color: #800080;
+    background-color: white;
 }
 
 .header_text {
     position: absolute;
     bottom: 0;
     width: 100vw;`
-    color: white;
     cursor: pointer;
-    line-height: 0.666
+    line-height: 0.666;
+}
+
+.header_text:hover {
+    color: #00ffff;
 }
 
 .contact {
