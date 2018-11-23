@@ -81,9 +81,15 @@ body {
 	display:flex;
 	justify-content: flex-start;
 }
+
 .live-code{
 	margin-right:2vw;
 	margin-top:2vh;
 	padding:0.5vh;
 	outline:1px solid #606060;
+   	transition: background-color 0s;
+}
+
+.live-code:hover {
+    background-color: #d9d9d9;
 }
