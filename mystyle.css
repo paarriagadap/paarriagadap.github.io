@@ -42,7 +42,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	height:30vh;
-	overflow: hidden;
+	overflow: scroll;
 	width:60vw;
 	padding:1vh;
 	margin-bottom: 0;
