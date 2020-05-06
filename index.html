@@ -1,123 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <title>«atelier»</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="mystyle.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-</head>
-    
-<body>
-    <div class="header">
-        <div class="header_text">APPEL</div>
-        <div class="contact">+1 646 236 6851</div>
-        <div class="contact">cameron.appel &#91;at&#93; yahoo &#91;dot&#93; com</div>
-    </div>
-	
-	<div class="project">
-		<img class="thumbnail" src="camy125.github.io/stopnsearch.jpg">
-		<div class="proj_desc">
-			<div class="proj_title">London Air Pollution</div>
-			<div class="desc_text">
-				Visualisation of Nitrogen Dioxide concentration in the United Kingdom's capital
-				<div class="versions">
-					<a href="london_map.html" class="live-code" style="text-decorations:none; color:inherit;">Article</a>
-				</div>
-			</div>
-		</div>
-	</div>	
-	
-	<div class="project">
-		<img class="thumbnail" src="camy125.github.io/stopnsearch.jpg">
-		<div class="proj_desc">
-			<div class="proj_title">Racial Disparities in Law Enforcement in the United Kingdom</div>
-			<div class="desc_text">
-				An article outlining the patterns and historical roots of racial discrimination in the enforcement of drug laws in the United Kingdom
-				<div class="versions">
-					<a href="fed_article.html" class="live-code" style="text-decorations:none; color:inherit;">Article</a>
-				</div>
-			</div>
-		</div>
-	</div>	
-	
-    <div class="project">
-		<img class="thumbnail" src="camy125.github.io/US_Capitol_west_side.jpg">
-		<div class="proj_desc">
-			<div class="proj_title">Lobbying and Unions: The Influence of the American Legislative Exchange Council on Right-to-Work Laws</div>
-			<div class="desc_text">
-				A descriptive paper on the activity of the American Legislative Exchange Council, and the economic models of rent seeking, unions, and collective action.
-				<div class="versions">
-					<a href="alec_article.html" class="live-code" style="text-decorations:none; color:inherit;">Article</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="project">
-		<img class="thumbnail" src="camy125.github.io/digital_divide.png">
-		<div class="proj_desc">
-			<div class="proj_title">The Digital Divide is narrowing - but it's deeper than it looks</div>
-			<div class="desc_text">
-				While almost half of the world’s population now have access to the internet, some concerning trends in the diffusion of information and communication technology (ICT) have arisen. If left unchecked, these patterns threaten to offset the potential benefits of the internet, and even perpetuate pre-existing problems. This post discusses the nature and nuances of the Digital Divide.
-				<div class="versions">
-					<a href="d_article.html" class="live-code" style="text-decorations:none; color:inherit;">Article</a>
-				</div>
-			</div>
-		</div>
-	</div>
-    
-    <div class="project">
-		<img class="thumbnail" src="camy125.github.io/woking_wanderer.png">
-		<div class="proj_desc">
-			<div class="proj_title">Islamic Review: The Woking Wanderer</div>
-			<div class="desc_text">
-                		The story of a man's physical and spiritual journey, culminating in his conversion to Islam, for a one-off reprint of the Islamic Review.
-				<div class="versions">
-					<a href="islamic_review.pdf" class="live-code" style="text-decorations:none; color:inherit;">Article</a>
-				</div>
-			</div>
-		</div>
-	</div>
-
-    <div class="project">
-		<img class="thumbnail" src="camy125.github.io/tuj.png">
-		<div class="proj_desc">
-			<div class="proj_title">The Toronto Urban Journal: The ‘United Kingdom of Commuterland’</div>
-			<div class="desc_text">
-				A viewpoint article about devolution, public transportation, and London. Published in the debut issue of the Toronto Urban Journal.
-				<div class="versions">
-					<a href="tu_journal.pdf" class="live-code" style="text-decorations:none; color:inherit;">Article</a>
-				</div>
-			</div>
-		</div>
-	</div>	
-    
-    <div class="project">
-		<img class="thumbnail" src="camy125.github.io/anderson.png">
-		<div class="proj_desc">
-			<div class="proj_title">In Conversation With: Anderson Peguero II</div>
-			<div class="desc_text">
-				A conversation with a New York-based artist.
-				<div class="versions">
-					<a href="a_article.html" class="live-code" style="text-decorations:none; color:inherit;">Article</a>
-				</div>
-			</div>
-		</div>
-	</div>
-    
-    <div class="project" style="background: #00ffff;">
-		<img class="thumbnail" src="camy125.github.io/portrait.png">
-		<div class="proj_desc">
-			<div class="proj_title">Cam Appel</div>
-			<div class="desc_text">
-				<div class="versions">
-					<a href="Resume - C. Appel.pdf" class="live-code" style="text-decorations:none; color:inherit;">CV</a>
-					<a href="photos.html" class="live-code" style="text-decorations:none; color:inherit;">Photography</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</body>
-    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="./resources/ol.css">
+        <link rel="stylesheet" href="resources/fontawesome-all.min.css">
+        <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
+        <link rel="stylesheet" href="./resources/qgis2web.css">
+<style>
+.search-layer {
+  top: 65px;
+  left: .5em;
+}
+.ol-touch .search-layer {
+  top: 80px;
+}
+</style>
+        <style>
+        html, body {
+            background-color: #ffffff;
+        }
+        .ol-control button {
+            background-color: #f8f8f8 !important;
+            color: #000000 !important;
+            border-radius: 0px !important;
+        }
+        .ol-zoom, .geolocate, .gcd-gl-control .ol-control {
+            background-color: rgba(255,255,255,.4) !important;
+            padding: 3px !important;
+        }
+        .ol-scale-line {
+            background: none !important;
+        }
+        .ol-scale-line-inner {
+            border: 2px solid #f8f8f8 !important;
+            border-top: none !important;
+            background: rgba(255, 255, 255, 0.5) !important;
+            color: black !important;
+        }
+        </style>
+        <style>
+        #map {
+            width: 2201px;
+            height: 1088px;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+            <div id="popup" class="ol-popup">
+                <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                <div id="popup-content"></div>
+            </div>
+        </div>
+        <script src="resources/qgis2web_expressions.js"></script>
+        <script src="resources/polyfills.js"></script>
+        <script src="./resources/functions.js"></script>
+        <script src="./resources/ol.js"></script>
+        <script src="./resources/ol-layerswitcher.js"></script>
+        <script src="./layers/layers.js" type="text/javascript"></script> 
+        <script src="./resources/Autolinker.min.js"></script>
+        <script src="./resources/qgis2web.js"></script>
+    </body>
 </html>
