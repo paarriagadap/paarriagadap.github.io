@@ -84,31 +84,6 @@ h5{
     font-size: 1.2em;
 }
 
-.legend-income{
-    position: absolute;
-    left: 1%;
-    bottom:10vh;
-    background-color: #ffffff80;
-    z-index: 800;
-    padding: 0.75em;
-}
-
-.legend__inner{
-    display: flex;
-    flex: 1;
-    justify-content: space-evenly;
-}
-
-.legend-asthma{
-    position: absolute;
-    right: 1%;
-    bottom:10vh;
-    background-color: #ffffff80;
-    z-index: 800;
-    padding: 0.75em;
-}
-
-
 .item{
     height: 1.2em;
     width:6vw;
