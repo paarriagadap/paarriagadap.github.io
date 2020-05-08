@@ -32,7 +32,7 @@ var counties = L.geoJSON(null, {
 
 counties.addTo(map);
 // // Get data
-$.getJSON('data/transition.geojson')
+$.getJSON('data/london_data.geojson')
     .done(function (data) {
         counties.addData(data);
         counties.bringToBack();
