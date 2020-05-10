@@ -9,7 +9,7 @@ var wms_layers = [];
             
             source: new ol.source.XYZ({
     attributions: ' &middot; <a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors, CC-BY-SA</a>',
-                url: 'http://tile.openstreetmap.org/{z}/{x}/{y}.png'
+                url: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}'
             })
         });
 var lyr_LAEI2016_2016_NO2_1 = new ol.layer.Image({
