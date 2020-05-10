@@ -85,6 +85,7 @@ h5{
 }
 
 .legend-income{
+    font-family: 'Roboto', sans-serif;
     position: absolute;
     left: 1%;
     bottom:10vh;
@@ -100,6 +101,7 @@ h5{
 }
 
 .legend-asthma{
+    font-family: 'Roboto', sans-serif;
     position: absolute;
     right: 1%;
     bottom:10vh;
