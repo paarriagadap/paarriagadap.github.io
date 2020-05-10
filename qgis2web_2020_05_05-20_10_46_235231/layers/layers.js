@@ -7,9 +7,10 @@ var wms_layers = [];
             'opacity': 1.000000,
             
             
-            source: new ol.source.XYZ({
+            source: new ol.source.SXYZ({
     attributions: ' &middot; <a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors, CC-BY-SA</a>',
                 url: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}'
+                    subdomains: 'abcd',
             })
         });
 var lyr_LAEI2016_2016_NO2_1 = new ol.layer.Image({
