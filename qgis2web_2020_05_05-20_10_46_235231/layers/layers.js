@@ -7,7 +7,7 @@ var wms_layers = [];
             'opacity': 1.000000,
             
             
-            source: new ol.source.SXYZ({
+            source: new ol.source.XYZ({
     attributions: ' &middot; <a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors, CC-BY-SA</a>',
                 url: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}'
                     subdomains: 'abcd',
