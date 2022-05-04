@@ -24,6 +24,7 @@ app.controller('MainCtrl', function ($scope) {
                     return d3.format(',.1f')(d);
                 }
             },
+            interpolate: false,
         }
     };
 
