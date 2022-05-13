@@ -1,0 +1,816 @@
+/********************
+ * HTML CSS
+ */
+
+
+.chartWrap {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/********************
+  Box shadow and border radius styling
+*/
+.mvtooltip.with-3d-shadow,
+.with-3d-shadow .mvtooltip {
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+/********************
+ * TOOLTIP CSS
+ */
+
+.mvtooltip {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 1.0);
+  padding: 1px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  z-index: 10000;
+
+  font-family: Arial;
+  font-size: 13px;
+  text-align: left;
+  pointer-events: none;
+
+  white-space: nowrap;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/*Give tooltips that old fade in transition by
+    putting a "with-transitions" class on the container div.
+*/
+.mvtooltip.with-transitions,
+.with-transitions .mvtooltip {
+  transition: opacity 250ms linear;
+  -moz-transition: opacity 250ms linear;
+  -webkit-transition: opacity 250ms linear;
+
+  transition-delay: 250ms;
+  -moz-transition-delay: 250ms;
+  -webkit-transition-delay: 250ms;
+}
+
+.mvtooltip.x-mvtooltip,
+.mvtooltip.y-mvtooltip {
+  padding: 8px;
+}
+
+.mvtooltip h3 {
+  margin: 0;
+  padding: 4px 14px;
+  line-height: 18px;
+  font-weight: normal;
+  background-color: rgba(247, 247, 247, 0.75);
+  text-align: center;
+
+  border-bottom: 1px solid #ebebeb;
+
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+}
+
+.mvtooltip p {
+  margin: 0;
+  padding: 5px 14px;
+  text-align: center;
+}
+
+.mvtooltip span {
+  display: inline-block;
+  margin: 2px 0;
+}
+
+.mvtooltip table {
+  margin: 6px;
+  border-spacing: 0;
+}
+
+
+.mvtooltip table td {
+  padding: 2px 9px 2px 0;
+  vertical-align: middle;
+}
+
+.mvtooltip table td.key {
+  font-weight: normal;
+}
+
+.mvtooltip table td.value {
+  text-align: right;
+  font-weight: bold;
+}
+
+.mvtooltip table tr.highlight td {
+  padding: 1px 9px 1px 0;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+
+.mvtooltip table td.legend-color-guide div {
+  width: 8px;
+  height: 8px;
+  vertical-align: middle;
+}
+
+.mvtooltip .footer {
+  padding: 3px;
+  text-align: center;
+}
+
+
+.mvtooltip-pending-removal {
+  position: absolute;
+  pointer-events: none;
+}
+
+
+/********************
+ * SVG CSS
+ */
+
+
+svg {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Trying to get SVG to act like a greedy block in all browsers */
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+svg text {
+  font: normal 12px Arial;
+}*/
+
+svg .title {
+  font: bold 14px Arial;
+}
+
+.mvc3 .mv-background {
+  fill: white;
+  fill-opacity: 0;
+  /*
+  pointer-events: none;
+  */
+}
+
+.mvc3.mv-noData {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+/**********
+*  Brush
+*/
+
+.mv-brush .extent {
+  fill-opacity: .125;
+  shape-rendering: crispEdges;
+}
+
+
+
+/**********
+*  Legend
+*/
+
+.mvc3 .mv-legend .mv-series {
+  cursor: pointer;
+
+}
+
+.mvc3 .mv-legend .disabled circle {
+  fill-opacity: 0;
+}
+
+
+
+/**********
+*  Axes
+*/
+.mvc3 .mv-axis {
+  pointer-events: none;
+}
+
+.mvc3 .mv-axis path {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .75;
+  shape-rendering: crispEdges;
+}
+
+.mvc3 .mv-axis path.domain {
+  stroke-opacity: .75;
+}
+
+.mvc3 .mv-axis.mv-x path.domain {
+  stroke-opacity: 0;
+}
+
+.mvc3 .mv-axis line {
+  fill: none;
+  stroke: #e5e5e5;
+  shape-rendering: crispEdges;
+}
+
+.mvc3 .mv-axis .zero line,
+/*this selector may not be necessary*/
+.mvc3 .mv-axis line.zero {
+  stroke-opacity: .75;
+}
+
+.mvc3 .mv-axis .mv-axisMaxMin text {
+  font-weight: bold;
+}
+
+.mvc3 .x .mv-axis .mv-axisMaxMin text,
+.mvc3 .x2 .mv-axis .mv-axisMaxMin text,
+.mvc3 .x3 .mv-axis .mv-axisMaxMin text {
+  text-anchor: middle
+}
+
+
+
+/**********
+*  Brush
+*/
+
+.mv-brush .resize path {
+  fill: #eee;
+  stroke: #666;
+}
+
+
+
+/**********
+*  Bars
+*/
+
+.mvc3 .mv-bars .negative rect {
+  zfill: brown;
+}
+
+.mvc3 .mv-bars rect {
+  zfill: steelblue;
+  fill-opacity: .75;
+
+  transition: fill-opacity 250ms linear;
+  -moz-transition: fill-opacity 250ms linear;
+  -webkit-transition: fill-opacity 250ms linear;
+}
+
+.mvc3 .mv-bars rect.hover {
+  fill-opacity: 1;
+}
+
+.mvc3 .mv-bars .hover rect {
+  fill: lightblue;
+}
+
+.mvc3 .mv-bars text {
+  fill: rgba(0, 0, 0, 0);
+}
+
+.mvc3 .mv-bars .hover text {
+  fill: rgba(0, 0, 0, 1);
+}
+
+
+/**********
+*  Bars
+*/
+
+.mvc3 .mv-multibar .mv-groups rect,
+.mvc3 .mv-multibarHorizontal .mv-groups rect,
+.mvc3 .mv-discretebar .mv-groups rect {
+  stroke-opacity: 0;
+
+  transition: fill-opacity 250ms linear;
+  -moz-transition: fill-opacity 250ms linear;
+  -webkit-transition: fill-opacity 250ms linear;
+}
+
+.mvc3 .mv-multibar .mv-groups rect:hover,
+.mvc3 .mv-multibarHorizontal .mv-groups rect:hover,
+.mvc3 .mv-discretebar .mv-groups rect:hover {
+  fill-opacity: 1;
+}
+
+.mvc3 .mv-discretebar .mv-groups text,
+.mvc3 .mv-multibarHorizontal .mv-groups text {
+  font-weight: bold;
+  fill: rgba(0, 0, 0, 1);
+  stroke: rgba(0, 0, 0, 0);
+}
+
+/***********
+*  Pie Chart
+*/
+
+.mvc3.mv-pie path {
+  stroke-opacity: 0;
+  transition: fill-opacity 250ms linear, stroke-width 250ms linear, stroke-opacity 250ms linear;
+  -moz-transition: fill-opacity 250ms linear, stroke-width 250ms linear, stroke-opacity 250ms linear;
+  -webkit-transition: fill-opacity 250ms linear, stroke-width 250ms linear, stroke-opacity 250ms linear;
+
+}
+
+.mvc3.mv-pie .mv-slice text {
+  stroke: #000;
+  stroke-width: 0;
+}
+
+.mvc3.mv-pie path {
+  stroke: #fff;
+  stroke-width: 1px;
+  stroke-opacity: 1;
+}
+
+.mvc3.mv-pie .hover path {
+  fill-opacity: .7;
+}
+
+.mvc3.mv-pie .mv-label {
+  pointer-events: none;
+}
+
+.mvc3.mv-pie .mv-label rect {
+  fill-opacity: 0;
+  stroke-opacity: 0;
+}
+
+/**********
+* Lines
+*/
+
+.mvc3 .mv-groups path.mv-line {
+  fill: none;
+  stroke-width: 1.5px;
+  /*
+  stroke-linecap: round;
+  shape-rendering: geometricPrecision;
+
+  transition: stroke-width 250ms linear;
+  -moz-transition: stroke-width 250ms linear;
+  -webkit-transition: stroke-width 250ms linear;
+
+  transition-delay: 250ms
+  -moz-transition-delay: 250ms;
+  -webkit-transition-delay: 250ms;
+  */
+}
+
+.mvc3 .mv-groups path.mv-line.mv-thin-line {
+  stroke-width: 1px;
+}
+
+
+.mvc3 .mv-groups path.mv-area {
+  stroke: none;
+  /*
+  stroke-linecap: round;
+  shape-rendering: geometricPrecision;
+
+  stroke-width: 2.5px;
+  transition: stroke-width 250ms linear;
+  -moz-transition: stroke-width 250ms linear;
+  -webkit-transition: stroke-width 250ms linear;
+
+  transition-delay: 250ms
+  -moz-transition-delay: 250ms;
+  -webkit-transition-delay: 250ms;
+  */
+}
+
+.mvc3 .mv-line.hover path {
+  stroke-width: 6px;
+}
+
+/*
+.mvc3.scatter .groups .point {
+  fill-opacity: 0.1;
+  stroke-opacity: 0.1;
+}
+  */
+
+.mvc3.mv-line .mvc3.mv-scatter .mv-groups .mv-point {
+  fill-opacity: 0;
+  stroke-opacity: 0;
+}
+
+.mvc3.mv-scatter.mv-single-point .mv-groups .mv-point {
+  fill-opacity: .5 !important;
+  stroke-opacity: .5 !important;
+}
+
+
+.with-transitions .mvc3 .mv-groups .mv-point {
+  transition: stroke-width 250ms linear, stroke-opacity 250ms linear;
+  -moz-transition: stroke-width 250ms linear, stroke-opacity 250ms linear;
+  -webkit-transition: stroke-width 250ms linear, stroke-opacity 250ms linear;
+
+}
+
+.mvc3.mv-scatter .mv-groups .mv-point.hover,
+.mvc3 .mv-groups .mv-point.hover {
+  stroke-width: 7px;
+  fill-opacity: .95 !important;
+  stroke-opacity: .95 !important;
+}
+
+
+.mvc3 .mv-point-paths path {
+  stroke: #aaa;
+  stroke-opacity: 0;
+  fill: #eee;
+  fill-opacity: 0;
+}
+
+
+
+.mvc3 .mv-indexLine {
+  cursor: ew-resize;
+}
+
+
+/**********
+* Distribution
+*/
+
+.mvc3 .mv-distribution {
+  pointer-events: none;
+}
+
+
+
+/**********
+*  Scatter
+*/
+
+/* **Attempting to remove this for useVoronoi(false), need to see if it's required anywhere
+.mvc3 .mv-groups .mv-point {
+  pointer-events: none;
+}
+*/
+
+.mvc3 .mv-groups .mv-point.hover {
+  stroke-width: 20px;
+  stroke-opacity: .5;
+}
+
+.mvc3 .mv-scatter .mv-point.hover {
+  fill-opacity: 1;
+}
+
+/*
+.mv-group.hover .mv-point {
+  fill-opacity: 1;
+}
+*/
+
+
+/**********
+*  Stacked Area
+*/
+
+.mvc3.mv-stackedarea path.mv-area {
+  fill-opacity: .7;
+  /*
+  stroke-opacity: .65;
+  fill-opacity: 1;
+  */
+  stroke-opacity: 0;
+
+  transition: fill-opacity 250ms linear, stroke-opacity 250ms linear;
+  -moz-transition: fill-opacity 250ms linear, stroke-opacity 250ms linear;
+  -webkit-transition: fill-opacity 250ms linear, stroke-opacity 250ms linear;
+
+  /*
+  transition-delay: 500ms;
+  -moz-transition-delay: 500ms;
+  -webkit-transition-delay: 500ms;
+  */
+
+}
+
+.mvc3.mv-stackedarea path.mv-area.hover {
+  fill-opacity: .9;
+  /*
+  stroke-opacity: .85;
+  */
+}
+
+/*
+.c3stackedarea .groups path {
+  stroke-opacity: 0;
+}
+  */
+
+
+
+.mvc3.mv-stackedarea .mv-groups .mv-point {
+  stroke-opacity: 0;
+  fill-opacity: 0;
+}
+
+/*
+.mvc3.mv-stackedarea .mv-groups .mv-point.hover {
+  stroke-width: 20px;
+  stroke-opacity: .75;
+  fill-opacity: 1;
+}*/
+
+
+
+/**********
+*  Line Plus Bar
+*/
+
+.mvc3.mv-linePlusBar .mv-bar rect {
+  fill-opacity: .75;
+}
+
+.mvc3.mv-linePlusBar .mv-bar rect:hover {
+  fill-opacity: 1;
+}
+
+
+/**********
+*  Bullet
+*/
+
+.mvc3.mv-bullet {
+  font: 10px sans-serif;
+}
+
+.mvc3.mv-bullet .mv-measure {
+  fill-opacity: .8;
+}
+
+.mvc3.mv-bullet .mv-measure:hover {
+  fill-opacity: 1;
+}
+
+.mvc3.mv-bullet .mv-marker {
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+.mvc3.mv-bullet .mv-markerTriangle {
+  stroke: #000;
+  fill: #fff;
+  stroke-width: 1.5px;
+}
+
+.mvc3.mv-bullet .mv-tick line {
+  stroke: #666;
+  stroke-width: .5px;
+}
+
+.mvc3.mv-bullet .mv-range.mv-s0 {
+  fill: #eee;
+}
+
+.mvc3.mv-bullet .mv-range.mv-s1 {
+  fill: #ddd;
+}
+
+.mvc3.mv-bullet .mv-range.mv-s2 {
+  fill: #ccc;
+}
+
+.mvc3.mv-bullet .mv-title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.mvc3.mv-bullet .mv-subtitle {
+  fill: #999;
+}
+
+
+.mvc3.mv-bullet .mv-range {
+  fill: #bababa;
+  fill-opacity: .4;
+}
+
+.mvc3.mv-bullet .mv-range:hover {
+  fill-opacity: .7;
+}
+
+
+
+/**********
+* Sparkline
+*/
+
+.mvc3.mv-sparkline path {
+  fill: none;
+}
+
+.mvc3.mv-sparklineplus g.mv-hoverValue {
+  pointer-events: none;
+}
+
+.mvc3.mv-sparklineplus .mv-hoverValue line {
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+
+.mvc3.mv-sparklineplus,
+.mvc3.mv-sparklineplus g {
+  pointer-events: all;
+}
+
+.mvc3 .mv-hoverArea {
+  fill-opacity: 0;
+  stroke-opacity: 0;
+}
+
+.mvc3.mv-sparklineplus .mv-xValue,
+.mvc3.mv-sparklineplus .mv-yValue {
+  /*
+  stroke: #666;
+  */
+  stroke-width: 0;
+  font-size: .9em;
+  font-weight: normal;
+}
+
+.mvc3.mv-sparklineplus .mv-yValue {
+  stroke: #f66;
+}
+
+.mvc3.mv-sparklineplus .mv-maxValue {
+  stroke: #2ca02c;
+  fill: #2ca02c;
+}
+
+.mvc3.mv-sparklineplus .mv-minValue {
+  stroke: #d62728;
+  fill: #d62728;
+}
+
+.mvc3.mv-sparklineplus .mv-currentValue {
+  /*
+  stroke: #444;
+  fill: #000;
+  */
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/**********
+* historical stock
+*/
+
+.mvc3.mv-ohlcBar .mv-ticks .mv-tick {
+  stroke-width: 2px;
+}
+
+.mvc3.mv-ohlcBar .mv-ticks .mv-tick.hover {
+  stroke-width: 4px;
+}
+
+.mvc3.mv-ohlcBar .mv-ticks .mv-tick.positive {
+  stroke: #2ca02c;
+}
+
+.mvc3.mv-ohlcBar .mv-ticks .mv-tick.negative {
+  stroke: #d62728;
+}
+
+.mvc3.mv-historicalStockChart .mv-axis .mv-axislabel {
+  font-weight: bold;
+}
+
+.mvc3.mv-historicalStockChart .mv-dragTarget {
+  fill-opacity: 0;
+  stroke: none;
+  cursor: move;
+}
+
+.mvc3 .mv-brush .extent {
+  /*
+  cursor: ew-resize !important;
+  */
+  fill-opacity: 0 !important;
+}
+
+.mvc3 .mv-brushBackground rect {
+  stroke: #000;
+  stroke-width: .4;
+  fill: #fff;
+  fill-opacity: .7;
+}
+
+
+
+/**********
+* Indented Tree
+*/
+
+
+/**
+ * TODO: the following 3 selectors are based on classes used in the example.  I should either make them standard and leave them here, or move to a CSS file not included in the library
+ */
+.mvc3.mv-indentedtree .name {
+  margin-left: 5px;
+}
+
+.mvc3.mv-indentedtree .clickable {
+  color: #08C;
+  cursor: pointer;
+}
+
+.mvc3.mv-indentedtree span.clickable:hover {
+  color: #005580;
+  text-decoration: underline;
+}
+
+
+.mvc3.mv-indentedtree .mv-childrenCount {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.mvc3.mv-indentedtree .mv-treeicon {
+  cursor: pointer;
+  /*
+  cursor: n-resize;
+  */
+}
+
+.mvc3.mv-indentedtree .mv-treeicon.mv-folded {
+  cursor: pointer;
+  /*
+  cursor: s-resize;
+  */
+}
+
+/**********
+* Parallel Coordinates
+*/
+
+.mvc3 .background path {
+  fill: none;
+  stroke: #ccc;
+  stroke-opacity: .4;
+  shape-rendering: crispEdges;
+}
+
+.mvc3 .foreground path {
+  fill: none;
+  stroke: steelblue;
+  stroke-opacity: .7;
+}
+
+.mvc3 .brush .extent {
+  fill-opacity: .3;
+  stroke: #fff;
+  shape-rendering: crispEdges;
+}
+
+.mvc3 .axis line,
+.axis path {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.mvc3 .axis text {
+  text-shadow: 0 1px 0 #fff;
+}
+
+/****
+Interactive Layer
+*/
+.mvc3 .mv-interactiveGuideLine {
+  pointer-events: none;
+}
+
+.mvc3 line.mv-guideline {
+  stroke: #ccc;
+}
