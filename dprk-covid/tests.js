@@ -49,7 +49,7 @@ deaths.controller('MainCtrl', function ($scope) {
     };
 
     $scope.data = [{
-        key: 'Daily change in samples tested', type: 'line', values: [
+        key: '7-day rolling average samples tested', type: 'line', values: [
 
             {
                 "x": 1607558400000,
@@ -1773,7 +1773,7 @@ deaths.controller('MainCtrl', function ($scope) {
 
             {
                 "x": 1606953600000,
-                "y": null,
+                "y": 0,
                 "series": 1
             },
             {
