@@ -2,15 +2,9 @@
 
 The data and metadata for each country are hosted on public Google Sheets documents, which can be accessed [here](https://docs.google.com/spreadsheets/d/1jLNfP3iuteUJrH0zS9qWONskyKh9pFcl1hKSlgEc-I8/edit#gid=1578718062).
 
-```
-import pandas as pd
 
-url = "https://docs.google.com/spreadsheets/d/1jLNfP3iuteUJrH0zS9qWONskyKh9pFcl1hKSlgEc-I8/gviz/tq?tqx=out:csv&sheet=All+data"
-all_data = pd.read_csv(url)
-all_data.to_csv('raw_df.csv')
-```
 
-Instructions on how to set up a local server to see the charts (we assume that you have Python installed on your machine)
+### Instructions on how to create charts and webpages
 
 Clone the repository into current working directory
 
@@ -31,11 +25,69 @@ Install necessary packages
 pip install -r requirements.txt
 ```
 
-Populate the chart datasets for each country (script does not work for Singapore)
+Sync the data in the repo with the data currently in the spreadsheet:
+
+```
+import pandas as pd
+
+url = "https://docs.google.com/spreadsheets/d/1jLNfP3iuteUJrH0zS9qWONskyKh9pFcl1hKSlgEc-I8/gviz/tq?tqx=out:csv&sheet=All+data"
+all_data = pd.read_csv(url)
+all_data.to_csv('raw_df.csv')
+```
+
+Populate the final chart datasets for each country 
+- Writes final series data to bottom_chart.csv, and top_chart.csv where relevant
 
 ```sh
 cd COUNTRY
 Rscript dataprep.R
+```
+
+Populate the source chart datasets and edit chart.html for each country. 
+ - Writes source series data into source_series_charts.js by copying the text of ../source_series_chart.js and inserting the data (string) after 'insert data'
+ - Writes the final series description into in chart.html by copying the text of ../chart_no_ED.html - or ../chart_ED.html and inserting the final series description (div_string) after 'insert data'
+
+```sh
+cd COUNTRY
+python chartprep.py
+```
+
+The data in source_series_charts.js should be formatted as such:
+
+```sh
+$scope.data[i] = [
+        { 
+            key: 'Chartbook series', type: 'line', values: 
+                [
+                    {'x': year, 'y': value, 'series': 0},
+                    {'x': year, 'y': value, 'series': 0},
+                    {'x': year, 'y': value, 'series': 0},
+                    ...
+                ], 
+            yAxis: 1 
+        }, 
+        { 
+            key: 'short reference - welfare concept', type: 'scatter', values: 
+                [
+                    {'x': year, 'y': value, 'series': 1}, 
+                    {'x': year, 'y': value, 'series': 1},
+                    {'x': year, 'y': value, 'series': 1},
+                    ...
+                ], 
+            yAxis: 1
+        },
+        { 
+            key: 'short reference - welfare concept', type: 'scatter', values: 
+                [
+                    {'x': year, 'y': value, 'series': j+1},
+                    {'x': year, 'y': value, 'series': j+1},
+                    {'x': year, 'y': value, 'series': j+1},
+                    ...
+                ],
+            yAxis: 1
+        }
+        ...
+    ];
 ```
 
 To edit the height and width of chart elements, open chartbook.html within the country's folder and search for lines demarcated with '// XXX' 
@@ -47,6 +99,12 @@ python -m http.server
 ```
 
 Open your browser and enter http://localhost:8000/
+
+Update references (stored [here](https://github.com/owid/chartbook/blob/main/References.csv))
+
+```sh
+python read_references.py
+```
 
 ### Index
 |Country|Google sheet URL|
@@ -74,8 +132,8 @@ Open your browser and enter http://localhost:8000/
 |Spain|https://docs.google.com/spreadsheets/d/1xXFMMP4glUrPevj4-rW04mqKQj8ebPAiP2tKNx8l6QA/edit?usp=sharing|
 |Sweden|https://docs.google.com/spreadsheets/d/1Ylee87yl-XL1PMeK9LMgLK5NkIxe5cmb7PdC53AoMWM/edit?usp=sharing|
 |Switzerland|https://docs.google.com/spreadsheets/d/1NXeIVqzbCAUGE6KpGLURIDVKUxXK8qBWOWfuo9Wn1Os/edit?usp=sharing|
-|UK	https://docs.google.com/spreadsheets/d/1qa1LD_R9F3hdnVcbo-MB6mAMoBOG-IcnSypQXzCeMj0/edit?usp=sharing|
-|US	https://docs.google.com/spreadsheets/d/1ONdnOFLa-SxtMe3uxtv1J3hZY16Li9mBf9Oi2gE4YwI/edit?usp=sharing|
+|UK|https://docs.google.com/spreadsheets/d/1qa1LD_R9F3hdnVcbo-MB6mAMoBOG-IcnSypQXzCeMj0/edit?usp=sharing|
+|US|https://docs.google.com/spreadsheets/d/1ONdnOFLa-SxtMe3uxtv1J3hZY16Li9mBf9Oi2gE4YwI/edit?usp=sharing|
 
 ### Data availability
 ### Overall Income Inequality
