@@ -9,26 +9,23 @@ var topincomecolor = '#6a3d9a'; // purple
 //	Bottom Chart 
 // –––––––––––––––––––––––––––––––––––––––––––––– //
 
+// Define dimension colors, following the order of the columns in bottom_chart.csv
 var series = [
     {
-        key: "Gini coefficient - Disposable household income",
         values: [],
-        color: overallinequalitycolor
+        color: overallinequalitycolor // XXX
     },
     {
-        key: "Share of top 1% - Pre-tax national income (equal-split adults)",
         values: [],
-        color: topincomecolor
+        color: topincomecolor // XXX
     },
     {
-        key: "Share of top 1% - Pre-tax fiscal income (tax units) (excluding capital gains)",
         values: [],
-        color: topincomecolor
+        color: topincomecolor // XXX
     },
     {
-        key: "Share below 50% median - Equivalised household income",
         values: [],
-        color: povertycolor
+        color: povertycolor // XXX
     },
 ]
 
@@ -37,10 +34,12 @@ var LH_tickMarks = [10, 20, 30, 40, 50, 60] // XXX     10,20,30,40,50,60,70,80,9
 
 c3.csv("bottom_chart.csv", function (error, csv) {
     if (error) return console.log("there was an error loading the csv: " + error);
-    console.log("there are " + csv.length + " elements in my csv set");
+    console.log("There are " + [Object.keys(csv[0])][0].length + " series in the CSV");
 
     // Creates array of column names 
-    var column_names = series.map(item => { return item.key });; // XXX
+    var column_names = [Object.keys(csv[0])][0]; // XXX
+    column_names.shift()
+
     console.log(column_names)
 
     // Modifies years to fit chart
@@ -440,13 +439,13 @@ c3.csv("../raw_df.csv", function (data) {
         .append("text")
         .attr("class", "linelabel")
         .style("fill", topincomecolor)
-        .text("Share of top 1% - Pre-tax fiscal income (tax units)") // XXX
+        .text("Share of top 1% - Pre-tax fiscal income (tax units,") // XXX
         .attr("x", 755)
         .attr("y", 330);
     c3.select('#chart2').append('text')
         .attr("class", "linelabel")
         .style("fill", topincomecolor)
-        .text("(excluding capital gains) ★")
+        .text("excluding capital gains) ★")
         .attr("x", 755)
         .attr("y", 340);
 })
@@ -472,9 +471,6 @@ c3.csv("../raw_df.csv", function (data) {
 
 
 
-
-
-
 /* ---------------------------------------------------- */
 // Credits
 /* ---------------------------------------------------- */
@@ -485,23 +481,23 @@ var xorigin = 8;
 var yorigin = 1;
 
 /*1. Zeile*/
-// creditsCanvas
-//     .append("text")
-//     .text("A. B. Atkinson, J. Hasell, S. Morelli and M. Roser (2017) – 'The Chartbook of Economic Inequality' at")
-//     .attr("x", xorigin + 0)
-//     .attr("y", yorigin + 10)
-//     .attr("id", 'erstesTextstuckZweiteZeile').attr('class', 'creditsText');
+creditsCanvas
+    .append("text")
+    .text("A. B. Atkinson, J. Hasell, S. Morelli, M. Roser and C. Appel (2022) – 'The Chartbook of Economic Inequality' at")
+    .attr("x", xorigin + 0)
+    .attr("y", yorigin + 10)
+    .attr("id", 'erstesTextstuckZweiteZeile').attr('class', 'creditsText');
 
-// var erstesTextstuckZweiteZeileLange = document.getElementById('erstesTextstuckZweiteZeile').getComputedTextLength();
+var erstesTextstuckZweiteZeileLange = document.getElementById('erstesTextstuckZweiteZeile').getComputedTextLength();
 
-// creditsCanvas.append("svg:a")
-//     .attr("xlink:href", "http://www.chartbookofeconomicinequality.com")
-//     .attr("target", "_blank")
-//     .append("svg:text")
-//     .attr("x", xorigin + erstesTextstuckZweiteZeileLange + 3)
-//     .attr("y", yorigin + 10)
-//     .attr('class', 'creditsLink')
-//     .text("www.ChartbookOfEconomicInequality.com");
+creditsCanvas.append("svg:a")
+    .attr("xlink:href", "http://www.chartbookofeconomicinequality.com")
+    .attr("target", "_blank")
+    .append("svg:text")
+    .attr("x", xorigin + erstesTextstuckZweiteZeileLange + 3)
+    .attr("y", yorigin + 10)
+    .attr('class', 'creditsLink')
+    .text("www.ChartbookOfEconomicInequality.com");
 
 
 /*2. Zeile left*/
@@ -519,9 +515,7 @@ creditsCanvas.append("text")
     .attr("x", xorigin + erstesTextstuckMeasureLinkLange + 3)
     .attr("y", yorigin + 26)
     .attr('class', 'creditsText').attr("id", 'zweitesTextstuckMeasureLink')
-    .text("for an explanation of the measures of economic inequality.");
-var zweitesTextstuckMeasureLinkLange = document.getElementById('zweitesTextstuckMeasureLink').getComputedTextLength();
-
+    .text("for an explanation of the measures of economic inequality");
 
 
 /*2. Zeile – right*/
@@ -549,15 +543,15 @@ creditsCanvas
     .text("View the")
     .attr("x", xorigin + 0)
     .attr("y", yorigin + 40)
-    .attr("id", 'erstesTextstuckZweiteZeile').attr('class', 'creditsText');
+    .attr("id", 'erstesTextstuckDritteZeile').attr('class', 'creditsText');
 
-var erstesTextstuckZweiteZeileLange = document.getElementById('erstesTextstuckZweiteZeile').getComputedTextLength();
+var erstesTextstuckDritteZeileLange = document.getElementById('erstesTextstuckDritteZeile').getComputedTextLength();
 
 creditsCanvas.append("svg:a")
     .attr("xlink:href", "https://docs.google.com/spreadsheets/d/1jLNfP3iuteUJrH0zS9qWONskyKh9pFcl1hKSlgEc-I8/edit#gid=1578718062")
     .attr("target", "_blank")
     .append("svg:text")
-    .attr("x", xorigin + erstesTextstuckZweiteZeileLange + 3)
+    .attr("x", xorigin + erstesTextstuckDritteZeileLange + 3)
     .attr("y", yorigin + 40)
     .attr('class', 'creditsLink')
     .text("database");
