@@ -687,16 +687,9 @@ c3.select('#chart2')
     .append("text")
     .attr("class", "linelabel")
     .style("fill", wealthcolor)
-    .text("Share of top 1% - Individual net wealth (estate4")
+    .text("Share of top 1% - Net wealth ★")
     .attr("x", 760)
     .attr("y", 133);
-c3.select('#chart2')
-    .append("text")
-    .attr("class", "linelabel")
-    .style("fill", wealthcolor)
-    .text("interpolated series) ★")
-    .attr("x", 760)
-    .attr("y", 143);
 
 
 
