@@ -679,7 +679,7 @@ c3.select('#chart2')
     .append("text")
     .attr("class", "linelabel")
     .style("fill", wealthcolor)
-    .text("Share of top 1% - Individual net wealth ★")
+    .text("Share of top 1% - Household net wealth ★")
     .attr("x", 760)
     .attr("y", 108);
 
