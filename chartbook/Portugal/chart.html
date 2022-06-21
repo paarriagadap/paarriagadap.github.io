@@ -131,9 +131,6 @@
     <script src="https://rawgit.com/krispo/angular-nvd3/v1.0.6/dist/angular-nvd3.js"></script>
     <script src="source_series_charts.js"></script>
     <div ng-controller="MainCtrl" id="source_charts">
-        <h1>
-            Portugal
-        </h1>
         <!-- insert data -->
         <h2><span style='color:#008000'>Overall Income Inequality: </span>Gini coefficient - Equivalised disposable
             household income (series 3) ★</h2>
@@ -148,8 +145,8 @@
         <p><b>What is the source data that the Chartbook relies on? </b>Gini coefficient of equivalised disposable
             household income. A single source series is used, taken from Rodrigues (1996), as presented in Rodrigues,
             Figueiras, and Junqueira (2012) Quadro 16. The authors note that there are methodological differences
-            between the Pereirinha study and Rodrigues et al's "in terms of the scope of family income, the equivalence
-            scales used, etc".</p>
+            between the Pereirinha (1988) study and Rodrigues' (1996) study "in terms of the scope of family income, the
+            equivalence scales used, etc".</p>
         <h4>How does the Chartbook series compare with the source data?</h4>
         <nvd3 options='options' data='data1'></nvd3>
         <h2><span style='color:#008000'>Overall Income Inequality: </span>Gini coefficient - Equivalised disposable
@@ -157,8 +154,8 @@
         <p><b>What is the source data that the Chartbook relies on? </b>Gini coefficient of equivalised disposable
             household income from Eurostat (ilc_di12 series), based on EU-SILC surveys (we adjust the data back by one
             year to align with the income reference period used within the EU-SILC survey); linked back at 2000 to
-            series by INE PEADP from 1993 to 2000 and ICOR from 2004 to 2010, as presented in Rodrigues, Figueiras &
-            Junqueira (2012) Quadro 18.</p>
+            series based on INE PEADP from 1993 to 2000, as presented in Rodrigues, Figueiras & Junqueira (2012) Quadro
+            18.</p>
         <h4>How does the Chartbook series compare with the source data?</h4>
         <nvd3 options='options' data='data2'></nvd3>
         <h2><span style='color:#6a3d9a'>Top Income Shares: </span>Share of top 1% - Pre-tax fiscal income (tax units,
@@ -195,12 +192,27 @@
         <h2><span style='color:#104E8B'>Earnings Dispersion: </span>Top decile as % median - Gross individual earnings ★
         </h2>
         <p><b>What is the source data that the Chartbook relies on? </b>Earnings at top decile as percentage of median
-            earnings from series calculated Carlos Farinha Rodrigues based on a a sample of Quadros de Pessoal
+            earnings from series calculated by Carlos Farinha Rodrigues based on a a sample of Quadros de Pessoal
             (personnel records of employers with at least one employee), as presented in Atkinson (2008); linked
             forwards at 2002 to the series the OECD.</p>
         <h4>How does the Chartbook series compare with the source data?</h4>
         <nvd3 options='options' data='data7'></nvd3>
     </div>
+
+    <h2>References</h2>
+    <li><a
+            href='https://wid.world/document/alvaredo-facundo-2010-top-incomes-and-earnings-in-portugal-1936-2005-in-atkinson-a-b-and-piketty-t-editors-top-incomes-a-global-perspective-oxford-university-press-2010-chap/'>Facundo,
+            A. (2010). Top incomes and earnings in Portugal 1936-2005. In "Top Incomes: A Global Perspective", 560-624.
+            Oxford University Press.</a></li>
+    <li><a href='https://books.google.com/books/about/Top_Incomes.html?id=zLQUDAAAQBAJ'>Atkinson, A. B. (2008). "The
+            Changing Distribution of earnings in OECD countries". Oxford University Press.</a></li>
+    <li>Rodrigues, C. F. (2005). Distribuição do rendimento, desigualdade e pobreza. PhD thesis, Universidade Technica
+        de Lisboa.</a></li>
+    <li><a href='https://www.ffms.pt/publicacoes/detalhe/847/desigualdade-economica-em-portugal'>Rodrigues, C. F. et al.
+            (2012). Desigualdade Económica em Portugal. Fundação Francisco Manuel dos Santos.</a></li>
+    <li><a href='https://www.proquest.com/docview/2015082442?pq-origsite=gscholar&fromopenview=true'>Pereirinha, J. A.
+            (1988). Inequalities, household income distribution and development in Portugal. Universidade Tecnica de
+            Lisboa (Portugal).</a></li>
 </body>
 
 </html>
