@@ -308,7 +308,7 @@ var AddToChart1 = c3.select('#chart1');
 //Include Title
 AddToChart1
     .append("text")
-    .text("Economic Inequality in US")  // XXX
+    .text("Economic Inequality in USA")  // XXX
     .attr("x", 500)
     .attr("y", 28)
     .style("fill", "black")  // Farbe geben
