@@ -34,16 +34,16 @@ The data and metadata for each country are hosted on public Google Sheets docume
 
 ### Website structure explained
 Country/<br/>
-├ `bottom_chart.csv` determines the figures and tooltips in the bottom chart in the final series chart<br/>
+├ `bottom_chart.csv` ★ determines the figures and tooltips in the bottom chart in the final series chart<br/>
 ├ `c3.v3.js` determines the behaviour of the final series chart<br/>
-├ `chart.html` determines the layour of the page, and the series descriptions<br/>
+├ `chart.html` ★ determines the layour of the page, and the series descriptions<br/>
 ├ `d3.min.js` determines the behaviour of the source series charts<br/>
-├ `final_series_chart.js` determines the layour of the final series chart. **Edit this** to change legends<br/>
+├ `final_series_chart.js` ★ determines the layour of the final series chart. **Edit this** to change legends<br/>
 ├ `mv.c3.css` determines the behaviour of the final series chart<br/>
 ├ `mv.c3.js` determines the behaviour of the final series chart<br/>
 ├ `nv.d3.min.js` determines the behaviour of the source series charts<br/>
-├ `source_series_charts.js` determines the figures and legends in the source series charts<br/>
-├ `top_chart.csv` determines the figures and tooltips in the top chart in the final series chart<br/>
+├ `source_series_charts.js` ★ determines the figures and legends in the source series charts<br/>
+├ `top_chart.csv` ★ determines the figures and tooltips in the top chart in the final series chart<br/>
 
 The content displayed in the [Chartbook](https://www.chartbookofeconomicinequality.com/) are iframes of html documents hosted by Git Pages in this repo.
 
