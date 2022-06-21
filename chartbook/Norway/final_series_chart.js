@@ -571,16 +571,9 @@ c3.select('#chart2')
     .append("text")
     .attr("class", "linelabel")
     .style("fill", overallinequalitycolor)
-    .text("Gini coefficient – Unequivalised gross family income")
+    .text("Gini coefficient – Gross family income")
     .attr("x", 760)
     .attr("y", 145);
-c3.select('#chart2')
-    .append("text")
-    .attr("class", "linelabel")
-    .style("fill", overallinequalitycolor)
-    .text("income")
-    .attr("x", 760)
-    .attr("y", 155);
 
 c3.select('#chart2')
     .append("text")

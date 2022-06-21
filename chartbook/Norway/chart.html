@@ -131,9 +131,6 @@
     <script src="https://rawgit.com/krispo/angular-nvd3/v1.0.6/dist/angular-nvd3.js"></script>
     <script src="source_series_charts.js"></script>
     <div ng-controller="MainCtrl" id="source_charts">
-        <h1>
-            Norway
-        </h1>
         <!-- insert data -->
         <h2><span style='color:#008000'>Overall Income Inequality: </span>Gini coefficient - Gross family income </h2>
         <p><b>What is the source data that the Chartbook relies on? </b>Gini coefficient of unequivalised gross family
@@ -196,8 +193,9 @@
             tabulations 1948-93, and tabulated wealth distributions from Statistics Norway since 1993. More details on
             the construction of this data is available in Aaberge and Atkinson (2010).</p>
         <h4>How does the Chartbook series compare with the source data?</h4>
-        <nvd3 options='options' data='data7'>>
+        <nvd3 options='options' data='data7'></nvd3>
     </div>
+
     <h2>References</h2>
     <li><a
             href='https://wid.world/document/aaberge-rolf-and-atkinson-anthony-b-2010-top-incomes-in-norway-in-atkinson-a-b-and-piketty-t-editors-top-incomes-a-global-perspective-oxford-university-press-chapter-9/'>Aaberge,
