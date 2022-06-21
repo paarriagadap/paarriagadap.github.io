@@ -10,7 +10,6 @@ var topincomecolor = '#6a3d9a'; // purple
 
 var top_series = [
     {
-        key: "Top decile as % median - Gross individual earnings", // XXX
         values: [],
         color: earningscolor
     }
@@ -22,7 +21,11 @@ c3.csv("top_chart.csv", function (error, csv) {  // XXX
     if (error) return console.log("there was an error loading the earnings dispersion csv: " + error);
     console.log("there are " + csv.length + " elements in my earnings dispersion dataset");
 
-    var column_names = top_series.map(item => { return item.key });  // Returns the column header i.e. the measure
+    // Creates array of column names 
+    var column_names = [Object.keys(csv[0])][0]; // XXX
+    column_names.shift()
+
+    console.log(column_names)
 
     for (var i = 0; i < column_names.length; i++) {
         top_series[i].key = column_names[i];
@@ -81,42 +84,34 @@ c3.csv("top_chart.csv", function (error, csv) {  // XXX
 
 var series = [
     {
-        key: "Gini coefficient - Equivalised after-tax household income",
         values: [],
         color: overallinequalitycolor
     },
     {
-        key: "Gini coefficient - Equivalised gross family money income",
         values: [],
         color: overallinequalitycolor
     },
     {
-        key: "Gini coefficient - Gross family income for non-farm families",
         values: [],
         color: overallinequalitycolor
     },
     {
-        key: "Share of top 1% - Pre-tax national income (equal-split adults)",
         values: [],
         color: topincomecolor
     },
     {
-        key: "Share of top 1% - Post-tax national income (individuals)",
         values: [],
         color: topincomecolor
     },
     {
-        key: "Share of top 1% - Pre-tax fiscal income (individuals)",
         values: [],
         color: topincomecolor
     },
     {
-        key: "Share below 50% median - Equivalised after-tax household income",
         values: [],
         color: povertycolor
     },
     {
-        key: "Share of top 1% - Net wealth",
         values: [],
         color: wealthcolor
     },
@@ -129,7 +124,10 @@ c3.csv("bottom_chart.csv", function (error, csv) { // XXX
     if (error) return console.log("there was an error loading the csv: " + error);
     console.log("there are " + csv.length + " elements in my csv set");
 
-    var column_names = series.map(item => { return item.key }); // XXX
+    // Creates array of column names 
+    var column_names = [Object.keys(csv[0])][0]; // XXX
+    column_names.shift()
+
     console.log(column_names)
 
     for (var i = 0; i < column_names.length; i++) {
@@ -672,7 +670,7 @@ c3.select('#chart2')
     .append("text")
     .attr("class", "linelabel")
     .style("fill", povertycolor)
-    .text("Share below 60% median - Equivalised disposable")
+    .text("Share below 50% median - Equivalised disposable")
     .attr("x", 760)
     .attr("y", 270);
 c3.select('#chart2')
