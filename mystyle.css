@@ -23,7 +23,7 @@ body {
 .header_text {
     position: absolute;
     bottom: 0;
-    width: 100vw;`
+    width: 100vw;
     cursor: pointer;
     line-height: 0.666;
 }
@@ -34,66 +34,67 @@ body {
 
 .contact {
     font-size: 1vw;
-	font-weight: 300;
-	text-align: left;
+    font-weight: 300;
+    text-align: left;
     color: white;
     cursor: pointer;
 }
 
-.project{
-    margin:0 auto;
+.project {
+    margin: 0 auto;
     margin-top: 3vh;
     margin-bottom: 0;
-	display: flex;
-	justify-content: space-between;
-	height:30vh;
-	overflow: scroll;
-	width:60vw;
-	padding:1vh;
-	margin-bottom: 0;
-	font-size: 2vh;
-	background: #fafafa
+    display: flex;
+    justify-content: space-between;
+    height: 30vh;
+    overflow: scroll;
+    width: 60vw;
+    padding: 1vh;
+    margin-bottom: 0;
+    font-size: 2vh;
+    background: #fafafa
 }
 
-.thumbnail{
-	width:43%;
-	object-fit: cover;
-	outline:0px solid black;
+.thumbnail {
+    width: 43%;
+    object-fit: cover;
+    outline: 0px solid black;
 }
 
-.proj_desc{
-	display: flex;
-	flex-direction: column;
-	text-align: justify;
-	justify-content: space-between;
-	width:53%;
-	outline:0px solid black;
-}
-.proj_title{
-	width:100%;
-	font-weight: 600;
-	font-size: 2.5vh;
-	outline:0px solid black;
+.proj_desc {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    justify-content: space-between;
+    width: 53%;
+    outline: 0px solid black;
 }
 
-.desc_text{
-	width:100%;
-	height:75%;
-	outline:0px solid black;
+.proj_title {
+    width: 100%;
+    font-weight: 600;
+    font-size: 2.5vh;
+    outline: 0px solid black;
 }
 
-.versions{
-	display:flex;
-	justify-content: flex-start;
+.desc_text {
+    width: 100%;
+    height: 75%;
+    outline: 0px solid black;
 }
 
-.live-code{
-	margin-right:2vw;
-	margin-top:2vh;
-	margin-bottom:3vh;
-	padding:0.5vh;
-	outline:1px solid #606060;
-   	transition: background-color 0s;
+.versions {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.live-code {
+    margin-right: 2vw;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    padding: 0.5vh;
+    outline: 1px solid #606060;
+    transition: background-color 0s;
 }
 
 .live-code:hover {
