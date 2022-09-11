@@ -176,16 +176,18 @@ body {
     background: silver;
     color: white;
     width: 100vw;
-    height: 5vw;
-    font-size: 10px;
+    /* height: 5vw; */
+    font-size: 15px;
     bottom: 0;
-    line-height: 20px;
-    /* font-size: 20px; */
+    /* line-height: 20px; */
 }
 
-/* .footer_text {
-    padding: 5px;
-} */
+.footer_text {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
 
 .title {
     position: relative;
