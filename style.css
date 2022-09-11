@@ -177,15 +177,15 @@ body {
     color: white;
     width: 100vw;
     height: 5vw;
-    font-size: 15px;
+    font-size: 10px;
     bottom: 0;
     line-height: 20px;
-    font-size: 20px;
+    /* font-size: 20px; */
 }
 
-.footer_text {
+/* .footer_text {
     padding: 5px;
-}
+} */
 
 .title {
     position: relative;
