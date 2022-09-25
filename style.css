@@ -183,7 +183,7 @@ body {
 }
 
 .footer_text {
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-content: center;
     flex-direction: column;
@@ -211,4 +211,8 @@ body {
     padding: 0vw 5vw 0vw 5vw;
     background: #fafafa;
     margin: 0
+}
+
+.box {
+    height: 7vw;
 }
